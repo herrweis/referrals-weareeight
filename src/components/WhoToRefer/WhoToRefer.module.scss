@@ -91,7 +91,7 @@
   position: relative;
   z-index: 5;
   padding: 3rem $section-padding 5rem;
-  max-width: $max-width;
+  max-width: calc(#{$max-width} + #{$section-padding} * 2);
   margin: 0 auto;
   font-size: clamp(1rem, 1.5vw, 4rem);
   color: $navy;
