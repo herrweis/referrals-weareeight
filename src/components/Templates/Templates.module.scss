@@ -1,0 +1,162 @@
+@use '../../styles/variables' as *;
+
+.section {
+  background: $grey;
+  padding: $section-padding;
+  border-radius: 1.5rem;
+  margin: 0 1rem;
+  min-height: clamp(100vh - 2rem, 100vh - 2rem, 100vh - 2rem);
+
+  @media (max-width: $mobile) {
+    padding: $section-padding-mobile 1.5rem;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(90vh - #{$section-padding} * 2);
+}
+
+.header {
+  @include section-header;
+  margin-bottom: 2.5rem;
+  margin-left: 0;
+}
+
+.headerLeft {
+  flex-shrink: 0;
+}
+
+.script {
+  @include section-script;
+  color: $pink;
+}
+
+.heading {
+  @include section-heading;
+  color: $navy;
+}
+
+.headerRight {
+  @include section-description;
+  color: $navy;
+}
+
+.pink {
+  color: $pink;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: $white;
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 1.1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba($grey, 1);
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: $navy;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tab {
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  border: none;
+  background: transparent;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  line-height: 1;;
+  cursor: pointer;
+  color: $navy;
+  font-family: inherit;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba($navy, 0.05);
+  }
+
+  &.active {
+    background: $pink;
+    color: $white;
+    font-weight: 600;
+  }
+}
+
+.cardBody {
+  flex: 1;
+}
+
+.subject {
+  font-size: 1rem;
+  color: $navy;
+  margin-bottom: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid rgba($navy, 0.1);
+}
+
+.templateText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $navy;
+  white-space: pre-line;
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-end;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $navy;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &.copied {
+    color: $pink-section;
+    font-weight: 600;
+  }
+}

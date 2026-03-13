@@ -1,0 +1,63 @@
+// Colors
+$navy: #1a1154;
+$pink: #e8a0a0;
+$pink-light: #e8b4b8;
+$pink-section: #e89ca0;
+$lavender: #c8c0d8;
+$white: #ffffff;
+$pink-accent: #f0b0b4;
+$grey: #D2DCE6;
+
+// Fonts
+$font-script: 'BetterYesterday', cursive;
+$font-heading: 'CircularSpotify', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-body: 'CircularSpotify', -apple-system, BlinkMacSystemFont, sans-serif;
+
+// Layout
+$max-width: 1600px;
+$section-padding: 4rem;
+$section-padding-mobile: 2rem;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+
+// Section header mixin (script + heading left, description right)
+@mixin section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@mixin section-script {
+  font-family: $font-script;
+  font-size: clamp(3rem, 3.5vw, 5rem);
+  display: block;
+  margin-bottom: -1.5rem;
+  line-height: 1;
+  @media (max-width: $mobile) {
+    margin-bottom: 0rem;
+  }
+}
+
+@mixin section-heading {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+@mixin section-description {
+  font-size: clamp(1rem, 1.2vw, 2rem);
+  max-width: 600px;
+  line-height: 1.5;
+  flex-shrink: 0;
+  padding-bottom: 0.5rem;
+}

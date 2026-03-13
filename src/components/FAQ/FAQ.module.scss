@@ -1,0 +1,71 @@
+@use '../../styles/variables' as *;
+
+.section {
+  background: $navy;
+  padding: 6rem $section-padding;
+
+  @media (max-width: $mobile) {
+    padding: 4rem $section-padding-mobile;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.headerWrap {
+  margin-bottom: 3rem;
+}
+
+.script {
+  @include section-script;
+  color: $pink;
+}
+
+.heading {
+  @include section-heading;
+  color: $white;
+}
+
+.list {
+  width: 100%;
+}
+
+.item {
+  border-bottom: 1px solid $pink;
+  padding: 1rem 0;
+}
+
+.question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  background: none;
+  border: none;
+  color: $white;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.answer {
+  padding: 0 0 1.5rem;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}

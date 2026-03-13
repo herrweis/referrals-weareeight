@@ -1,0 +1,82 @@
+@use '../../styles/variables' as *;
+
+.section {
+  background: $navy;
+  padding: 8rem $section-padding;
+
+  @media (max-width: $mobile) {
+    padding: 4rem $section-padding-mobile;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 5vw, 5rem);
+  margin: 5rem 0;
+  line-height: 1.1;
+}
+
+.pink {
+  color: $pink;
+  font-weight: 900;
+}
+
+.white {
+  color: $white;
+  font-weight: 900;
+}
+
+.table {
+  width: 100%;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem 0;
+  border-bottom: 1px solid;
+  font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.7);
+  align-items: center;
+
+  &.highlighted {
+    color: $white;
+    font-weight: 700;
+  }
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.letter {
+  display: inline-block;
+  transform: rotate(90deg);
+  font-family: $font-heading;
+  font-weight: 900;
+  font-size: 1.6em;
+  color: $pink;
+  width: 1.5em;
+  text-align: center;
+  flex-shrink: 0;
+  line-height: 1;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.headerText {
+  color: rgba(255, 255, 255, 0.5);
+}

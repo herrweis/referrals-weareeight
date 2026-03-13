@@ -1,0 +1,101 @@
+@use '../../styles/variables' as *;
+
+.section {
+  position: relative;
+  background: $pink-section;
+  color: $navy;
+  min-height: 300vh;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  background: $pink-section;
+  padding: 3rem $section-padding 2rem;
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 2rem $section-padding-mobile;
+  }
+}
+
+.headerContent {
+  @include section-header;
+}
+
+.headerLeft {
+  flex-shrink: 0;
+}
+
+.script {
+  @include section-script;
+}
+
+.heading {
+  @include section-heading;
+  color: $white;
+}
+
+.headerRight {
+  @include section-description;
+}
+
+.scrollArea {
+  position: relative;
+  z-index: 5;
+  padding: 3rem $section-padding 2rem;
+
+  @media (max-width: $mobile) {
+    padding: 2rem $section-padding-mobile;
+  }
+}
+
+.category {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  &:first-child {
+    margin-top: 50vh;
+  }
+
+  &:last-child {
+    margin-bottom: 4rem;
+  }
+}
+
+.catTitle {
+  font-size: clamp(4rem, 12vw, 20rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+  color: $navy;
+}
+
+.catDescription {
+  font-size: clamp(1rem, 1.5vw, 4rem);
+  color: $navy;
+  margin-bottom: 1rem;
+}
+
+.bottomText {
+  position: relative;
+  z-index: 5;
+  padding: 3rem 0 5rem 0;
+  max-width: $max-width;
+  margin: 0 auto;
+  font-size: clamp(1rem, 1.5vw, 4rem);
+  color: $navy;
+
+  @media (max-width: $mobile) {
+    padding: $section-padding-mobile;
+  }
+}

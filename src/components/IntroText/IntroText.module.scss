@@ -1,0 +1,36 @@
+@use '../../styles/variables' as *;
+
+.section {
+  background: $navy;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 6rem $section-padding;
+
+  @media (max-width: $mobile) {
+    padding: 4rem $section-padding-mobile;
+  }
+}
+
+.content {
+  max-width: $max-width;
+}
+
+.text {
+  font-size: clamp(1.2rem, 2.2vw, 2.6rem);
+  line-height: 1.2;
+  font-weight: 300;
+  color: $white;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  font-size: clamp(1.2rem, 2.2vw, 2.6rem);
+  line-height: 2.2;
+  font-weight: 300;
+  color: $white;
+}
+
+.pink {
+  color: $pink-accent;
+}
