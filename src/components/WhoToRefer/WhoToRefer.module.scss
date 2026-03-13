@@ -74,14 +74,15 @@
 
 .catTitle {
   font-size: clamp(4rem, 12vw, 20rem);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 0.9;
+  letter-spacing: -6px;
   margin-bottom: 0.5rem;
   color: $navy;
 }
 
 .catDescription {
-  font-size: clamp(1rem, 1.5vw, 4rem);
+  font-size: clamp(1rem, 1.6vw, 4rem);
   color: $navy;
   margin-bottom: 1rem;
 }

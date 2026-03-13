@@ -57,8 +57,15 @@ export default function Steps() {
           opacity = Math.max(0, 1 - (Math.abs(normalizedDist) - 0.15) * 3);
         }
 
+        // Exponentially grow stroke widths as number scales up
+        const strokeMultiplier = Math.pow(scale, 1.5);
+        const innerStroke = 32 * strokeMultiplier;
+        const outerStroke = 80 * strokeMultiplier;
+
         numbersRefs.current[i].style.transform = `translate(-50%, -35%) scale(${scale})`;
         numbersRefs.current[i].style.opacity = opacity;
+        numbersRefs.current[i].style.setProperty('--stroke-width-inner', `${innerStroke}px`);
+        numbersRefs.current[i].style.setProperty('--stroke-width-outer', `${outerStroke}px`);
       });
     };
 
@@ -77,9 +84,11 @@ export default function Steps() {
         >
           <div
             ref={(el) => (numbersRefs.current[i] = el)}
-            className={styles.number}
+            className={styles.numberContainer}
           >
-            {step.number}
+            <span className={styles.numberOuter} aria-hidden="true">{step.number}</span>
+            <span className={styles.numberInner} aria-hidden="true">{step.number}</span>
+            <span className={styles.number}>{step.number}</span>
           </div>
           <div className={styles.textContent}>
             <h3 className={styles.title}>{step.title}</h3>

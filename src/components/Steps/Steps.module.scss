@@ -14,19 +14,48 @@
   overflow: hidden;
 }
 
-.number {
+.numberContainer {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -35%);
   font-size: clamp(15rem, 50vw, 100rem);
   font-weight: 900;
-  color: $pink;
   line-height: 0.8;
   z-index: 0;
   pointer-events: none;
   will-change: transform, opacity;
   transition: none;
+  display: grid;
+  place-items: center;
+}
+
+.numberOuter,
+.numberInner,
+.number {
+  grid-area: 1 / 1;
+}
+
+// Outermost lavender stroke
+.numberOuter {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: var(--stroke-width-outer, 500px);
+  -webkit-text-stroke-color: rgba($pink, 0.2);
+  paint-order: stroke fill;
+}
+
+// Middle navy stroke
+.numberInner {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: var(--stroke-width-inner, 250px);
+  -webkit-text-stroke-color: $navy;
+  paint-order: stroke fill;
+}
+
+// Inner pink fill
+.number {
+  -webkit-text-fill-color: $pink;
+  color: $pink;
 }
 
 .textContent {
@@ -38,14 +67,15 @@
 }
 
 .title {
-  font-size: clamp(2.5rem, 5vw, 10rem);
+  font-size: clamp(2.5rem, 6vw, 10rem);
   font-weight: 900;
   color: $white;
   margin-bottom: 1rem;
+  line-height: 0.8;
 }
 
 .description {
-  font-size: clamp(1.2rem, 1.1vw, 2rem);
+  font-size: clamp(1.2rem, 1.3vw, 2rem);
   color: rgba(255, 255, 255, 1);
   line-height: 1.4;
   max-width: 600px;
