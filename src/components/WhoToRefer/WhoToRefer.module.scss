@@ -89,7 +89,7 @@
 .bottomText {
   position: relative;
   z-index: 5;
-  padding: 3rem 0 5rem 0;
+  padding: 3rem $section-padding 5rem;
   max-width: $max-width;
   margin: 0 auto;
   font-size: clamp(1rem, 1.5vw, 4rem);

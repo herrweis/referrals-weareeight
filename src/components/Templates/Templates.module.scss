@@ -26,8 +26,9 @@
 
 .header {
   @include section-header;
-  margin-bottom: 2.5rem;
-  margin-left: 0;
+  max-width: none;
+  margin: 0 0 2.5rem 0;
+  width: 100%;
 }
 
 .headerLeft {
