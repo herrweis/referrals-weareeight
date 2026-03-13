@@ -12,6 +12,7 @@ export default function Footer() {
           muted
           loop
           playsInline
+          poster="/videos/makeitrain_bottom_web.jpg"
         >
           <source src="/videos/makeitrain_bottom_web.webm" type="video/webm" />
           <source src="/videos/makeitrain_bottom_web.mp4" type="video/mp4" />
@@ -22,7 +23,9 @@ export default function Footer() {
       <div className={styles.content}>
         <p className={styles.scriptText}>You&apos;ve already thought of someone, didn&apos;t you.</p>
         <h2 className={styles.heading}>
-          Send that email. Make that call.
+          Send that email.
+          <br />
+          Make that call.
           <br />
           Drop that text.
         </h2>

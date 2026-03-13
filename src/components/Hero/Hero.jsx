@@ -22,6 +22,7 @@ export default function Hero() {
           muted
           loop
           playsInline
+          poster="/videos/makeitrain_top_web.jpg"
         >
           <source src="/videos/makeitrain_top_web.webm" type="video/webm" />
           <source src="/videos/makeitrain_top_web.mp4" type="video/mp4" />

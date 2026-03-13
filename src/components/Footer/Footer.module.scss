@@ -45,13 +45,13 @@
 
 .scriptText {
   font-family: $font-script;
-  font-size: clamp(4.5rem, 7vw, 20rem);
+  font-size: clamp(4.5rem, 6vw, 20rem);
   color: $white;
   margin-bottom: 1rem;
 }
 
 .heading {
-  font-size: clamp(3rem, 5.2vw, 10rem);
+  font-size: clamp(3rem, 6vw, 10rem);
   font-weight: 900;
   color: $white;
   line-height: 0.9;
