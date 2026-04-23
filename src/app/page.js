@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <IntroText />
+      {/* <IntroText /> */}
       <Steps />
       <WhoToRefer />
       <MathsTable />
