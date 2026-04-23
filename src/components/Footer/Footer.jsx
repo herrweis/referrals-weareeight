@@ -21,7 +21,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.content}>
-        <p className={styles.scriptText}>You&apos;ve already thought of someone, didn&apos;t you.</p>
+        <p className={styles.scriptText}>You&apos;ve already thought of someone, haven&apos;t you.</p>
         <h2 className={styles.heading}>
           Send that email.
           <br />
