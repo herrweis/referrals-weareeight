@@ -92,12 +92,20 @@
   z-index: 3;
   border-radius: 1.5rem;
   padding: clamp(2rem, 4vw, 4rem);
-  width: 60vw;
+  width: 85vw;
   height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 2000;
+
+  @media (min-width: $tablet) {
+    width: 80vw;
+  }
+
+  @media (min-width: $wide) {
+    width: 60vw;
+  }
 }
 
 .pink {
